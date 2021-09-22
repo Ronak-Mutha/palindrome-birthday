@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --light-color: #c4c4c4;
+    --dark-color: #161616;
+    --white-color: #f7f7f7;
+    --calender-svg: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 24 24" ><path fill="%23161616" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
+}
+
+body {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+
+}
+
+main {
+    max-width: 70vw;
+    margin: auto;
+    display:flex;
+    flex-direction: column;
+
+}
+
+.header {
+    margin: 1rem auto;
+    padding: 1rem 0;
+}
+
+.container {
+    margin: auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label, input {
+    align-self: flex-start;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    color: inherit;
+}
+
+input, button {
+    color: var(--dark-color);
+    background-color: var(--white-color);
+    transition: all 100ms ease-in-out;
+}
+
+input:focus, input:active, button:hover, button:active {
+    border: 2px solid var(--white-color);
+    outline: none;
+    background: var(--dark-color);
+    box-shadow: 0 0 5px var(--white-color);
+    color:inherit;
+    border-radius: 10px;
+}
+
+#birthdate-input::-webkit-calendar-picker-indicator {
+    background-image: var(--calender-svg);
+    color: inherit;
+  }
+
+label {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+input {
+    width: 90%;
+    font-size: 1rem;
+}
+
+button {
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 0.8rem
+}
+
+.output {
+    margin: 1rem auto;
+    font-size: 1.4rem;
+
+}
+
+footer {
+    max-width: 60vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.copyright {
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-list {
+    margin:auto;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+}
+
+.links {
+    padding: 2rem;
+}
+
+.icon {
+    transition: filter 300ms linear, height 600ms ease-in-out , height 600ms ease-in-out;
+}
+
+.links:hover, .links:focus {
+    outline: none;
+}
+
+.icon:hover, .icon:active, .icon:focus {
+    filter: invert(100%) sepia(3%) saturate(63%) hue-rotate(62deg) brightness(115%) contrast(94%);
+    height: 30px;
+    width: 30px;
+}
